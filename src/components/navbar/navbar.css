@@ -1,9 +1,9 @@
 nav {
-  background-color: rgb(48, 61, 78);
+  background-color: var(--dark-green);
 }
 
 li.nav-item.active {
-  background-color: rgb(88, 185, 157);
+  background-color: var(--green);
 
   border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
