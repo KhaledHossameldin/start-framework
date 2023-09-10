@@ -15,7 +15,7 @@ export default class Navbar extends Component {
 
     chooseTab = e => {
         for (let i = 0; i < navbarLinks.length; i++) {
-            if (e.target == navbarLinks[i]) {
+            if (e.target === navbarLinks[i]) {
                 navbarLinks[i].parentElement.classList.add('active');
             } else {
                 navbarLinks[i].parentElement.classList.remove('active');
@@ -27,7 +27,7 @@ export default class Navbar extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-dark navbar-expand-lg py-4">
+            <nav className="navbar navbar-dark navbar-expand-lg py-4 fixed-top">
                 <div className="container">
                     <Link onClick={this.clearActiveLinks} className="navbar-brand text-uppercase fs-2 fw-bolder" to="">Start Framework</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

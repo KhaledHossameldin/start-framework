@@ -1,0 +1,14 @@
+img#home-picture {
+    width: 15.625rem;
+}
+
+div.lines {
+    background-color: white;
+    height: 4px;
+    width: 80px;
+}
+
+div#home-content {
+    padding-top: 13.75rem;
+    padding-bottom: 7.25rem;
+}
