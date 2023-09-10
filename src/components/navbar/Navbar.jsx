@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './navbar.css';
 
 let navbarLinks;
+let navbar;
 
 export default class Navbar extends Component {
 
@@ -23,13 +24,23 @@ export default class Navbar extends Component {
         }
     }
 
-    componentDidMount = _ => navbarLinks = document.querySelectorAll('nav li.nav-item a.nav-link');
+    componentDidMount() {
+        navbar = document.querySelector('nav.navbar');
+        navbarLinks = document.querySelectorAll('nav li.nav-item a.nav-link');
+        window.addEventListener('scroll', function (e) {
+            if (this.window.scrollY >= 100) {
+                navbar.style.paddingBlock = '0.5rem';
+            } else {
+                navbar.style.paddingBlock = '1.5rem';
+            }
+        });
+    }
 
     render() {
         return (
-            <nav className="navbar navbar-dark navbar-expand-lg py-4 fixed-top">
+            <nav className="navbar navbar-dark navbar-expand-lg fixed-top">
                 <div className="container">
-                    <Link onClick={this.clearActiveLinks} className="navbar-brand text-uppercase fs-2 fw-bolder" to="">Start Framework</Link>
+                    <Link onClick={this.clearActiveLinks} className="navbar-brand text-uppercase fs-2 fw-bolder text-white" to="">Start Framework</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
