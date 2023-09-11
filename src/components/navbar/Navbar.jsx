@@ -5,13 +5,15 @@ import './navbar.css';
 
 export default class Navbar extends Component {
 
-    clearActiveLinks = _ => {
+    clearActiveLinks = e => {
+        document.title = e.target.getAttribute('data-name');
         for (let i = 0; i < this.navbarLinks.length; i++) {
             this.navbarLinks[i].parentElement.classList.remove('active');
         }
     }
 
     chooseTab = e => {
+        document.title = e.target.getAttribute('data-name');
         for (let i = 0; i < this.navbarLinks.length; i++) {
             if (e.target === this.navbarLinks[i]) {
                 this.navbarLinks[i].parentElement.classList.add('active');
@@ -37,20 +39,20 @@ export default class Navbar extends Component {
         return (
             <nav className="navbar navbar-dark navbar-expand-lg fixed-top">
                 <div className="container">
-                    <Link onClick={this.clearActiveLinks} className="navbar-brand text-uppercase fs-2 fw-bolder text-white" to="">Start Framework</Link>
+                    <Link onClick={this.clearActiveLinks} className="navbar-brand text-uppercase fs-2 fw-bolder text-white" to="" data-name="Home">Start Framework</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item me-3">
-                                <Link onClick={this.chooseTab} className="nav-link text-uppercase text-white fw-bold" aria-current="page" to="about">About</Link>
+                                <Link onClick={this.chooseTab} className="nav-link text-uppercase text-white fw-bold" aria-current="page" to="about" data-name="About">About</Link>
                             </li>
                             <li className="nav-item me-3">
-                                <Link onClick={this.chooseTab} className="nav-link text-uppercase text-white fw-bold" to="portfolio">Portfolio</Link>
+                                <Link onClick={this.chooseTab} className="nav-link text-uppercase text-white fw-bold" to="portfolio" data-name="Portfolio">Portfolio</Link>
                             </li>
                             <li className="nav-item me-3">
-                                <Link onClick={this.chooseTab} className="nav-link text-uppercase text-white fw-bold" to="contact">Contact</Link>
+                                <Link onClick={this.chooseTab} className="nav-link text-uppercase text-white fw-bold" to="contact" data-name="Contact">Contact</Link>
                             </li>
                         </ul>
                     </div>
