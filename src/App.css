@@ -3,3 +3,14 @@
   --dark-green: rgb(48, 61, 78);
   --darker-green: rgb(28, 37, 46);
 }
+
+div#content {
+  min-height: 95vh;
+  background-color: var(--green);
+}
+
+div.lines {
+  background-color: white;
+  height: 4px;
+  width: 80px;
+}
