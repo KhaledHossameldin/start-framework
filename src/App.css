@@ -1,4 +1,5 @@
 :root {
+  --faded-green: rgba(26, 188, 156, 0.9);
   --green: rgb(26, 188, 156);
   --dark-green: rgb(48, 61, 78);
   --darker-green: rgb(28, 37, 46);
@@ -9,8 +10,19 @@ div#content {
   background-color: var(--green);
 }
 
+div#white-content {
+  min-height: 95vh;
+  color: var(--dark-green);
+}
+
 div.lines {
   background-color: white;
+  height: 4px;
+  width: 80px;
+}
+
+div.colored-lines {
+  background-color: var(--dark-green);
   height: 4px;
   width: 80px;
 }

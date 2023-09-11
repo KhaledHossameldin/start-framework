@@ -3,35 +3,32 @@ import { Link } from 'react-router-dom';
 
 import './navbar.css';
 
-let navbarLinks;
-let navbar;
-
 export default class Navbar extends Component {
 
     clearActiveLinks = _ => {
-        for (let i = 0; i < navbarLinks.length; i++) {
-            navbarLinks[i].parentElement.classList.remove('active');
+        for (let i = 0; i < this.navbarLinks.length; i++) {
+            this.navbarLinks[i].parentElement.classList.remove('active');
         }
     }
 
     chooseTab = e => {
-        for (let i = 0; i < navbarLinks.length; i++) {
-            if (e.target === navbarLinks[i]) {
-                navbarLinks[i].parentElement.classList.add('active');
+        for (let i = 0; i < this.navbarLinks.length; i++) {
+            if (e.target === this.navbarLinks[i]) {
+                this.navbarLinks[i].parentElement.classList.add('active');
             } else {
-                navbarLinks[i].parentElement.classList.remove('active');
+                this.navbarLinks[i].parentElement.classList.remove('active');
             }
         }
     }
 
     componentDidMount() {
-        navbar = document.querySelector('nav.navbar');
-        navbarLinks = document.querySelectorAll('nav li.nav-item a.nav-link');
-        window.addEventListener('scroll', function (e) {
-            if (this.window.scrollY >= 30) {
-                navbar.style.paddingBlock = '0.5rem';
+        this.navbar = document.querySelector('nav.navbar');
+        this.navbarLinks = document.querySelectorAll('nav li.nav-item a.nav-link');
+        window.addEventListener('scroll', _ => {
+            if (window.scrollY >= 30) {
+                this.navbar.style.paddingBlock = '0.5rem';
             } else {
-                navbar.style.paddingBlock = '1.5rem';
+                this.navbar.style.paddingBlock = '1.5rem';
             }
         });
     }

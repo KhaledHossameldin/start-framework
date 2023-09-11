@@ -1,14 +1,15 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
 import 'bootstrap/dist/js/bootstrap.bundle';
+
 import Layout from './components/layout/Layout';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import About from './components/about/About';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
 import Home from './components/home/Home';
+
 
 const router = createBrowserRouter([
   {

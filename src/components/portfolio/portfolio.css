@@ -1,0 +1,29 @@
+div#white-content {
+    padding-top: 8.5rem;
+}
+
+div.portfolio-item {
+    cursor: pointer;
+}
+
+div.portfolio-item:hover div.portfolio-overlay {
+    opacity: 1;
+}
+
+div.portfolio-overlay {
+    background-color: var(--faded-green);
+    opacity: 0;
+    transition: 0.5s opacity;
+    -webkit-transition: 0.5s opacity;
+    -moz-transition: 0.5s opacity;
+    -ms-transition: 0.5s opacity;
+    -o-transition: 0.5s opacity;
+}
+
+div#image-modal {
+    z-index: 1031;
+}
+
+div#image-modal img {
+    width: 40%;
+}
