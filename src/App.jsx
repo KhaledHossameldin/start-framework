@@ -4,14 +4,14 @@ import './App.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 
 import Layout from './components/layout/Layout';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import About from './components/about/About';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
 import Home from './components/home/Home';
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/', element: <Layout />, children: [
       { path: '/', element: <Home /> },
