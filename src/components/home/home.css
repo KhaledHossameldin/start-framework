@@ -9,6 +9,5 @@ div.lines {
 }
 
 div#home-content {
-    padding-top: 13.75rem;
-    padding-bottom: 7.25rem;
+    min-height: 95vh;
 }

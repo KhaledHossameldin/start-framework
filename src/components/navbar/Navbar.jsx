@@ -28,7 +28,7 @@ export default class Navbar extends Component {
         navbar = document.querySelector('nav.navbar');
         navbarLinks = document.querySelectorAll('nav li.nav-item a.nav-link');
         window.addEventListener('scroll', function (e) {
-            if (this.window.scrollY >= 100) {
+            if (this.window.scrollY >= 30) {
                 navbar.style.paddingBlock = '0.5rem';
             } else {
                 navbar.style.paddingBlock = '1.5rem';
