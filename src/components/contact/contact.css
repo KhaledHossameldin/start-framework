@@ -1,0 +1,30 @@
+button {
+    padding: 0.375rem 0.75rem;
+    background-color: var(--green);
+    border: white solid 0.0625rem;
+    border-radius: 0.375rem;
+    -webkit-border-radius: 0.375rem;
+    -moz-border-radius: 0.375rem;
+    -ms-border-radius: 0.375rem;
+    -o-border-radius: 0.375rem;
+}
+
+label {
+    color: var(--green);
+    bottom: 25%;
+    transition: 0.5s bottom;
+    -webkit-transition: 0.5s bottom;
+    -moz-transition: 0.5s bottom;
+    -ms-transition: 0.5s bottom;
+    -o-transition: 0.5s bottom;
+}
+
+input.form-control {
+    border: none;
+    border-bottom: 0.0625rem solid lightgray;
+}
+
+input.form-control:focus {
+    box-shadow: none;
+    border-bottom: 0.0625rem solid lightgray;
+}
